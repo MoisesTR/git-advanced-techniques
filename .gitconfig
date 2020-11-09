@@ -1,0 +1,22 @@
+[user]
+	email = email@com
+	name = mtrigueros
+[alias]
+	co = checkout
+	ss = status --short
+	egc = config --global -e
+[core]
+	editor = code --new-window --wait
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+	tool = vscode-merge
+[mergetool] 
+	keepBackup = false
+[mergetool "vscode-merge"]
+	cmd = code --wait $MERGED
+[diff "exif"]
+	textconv = exiftool
